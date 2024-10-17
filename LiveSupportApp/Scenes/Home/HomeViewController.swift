@@ -18,6 +18,13 @@ final class HomeViewController: UIViewController, NavigationView {
         super.viewDidLoad()
         setupHomeView()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+        let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = backButton
+    }
 
     private func setupHomeView() {
         let homeView = HomeView(controller: self, delegate: self)

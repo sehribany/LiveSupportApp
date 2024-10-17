@@ -99,7 +99,7 @@ extension HomeView{
 
         titleLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(420)
+            make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(450)
             make.leading.trailing.equalToSuperview().inset(16)
         }
 
@@ -110,7 +110,7 @@ extension HomeView{
         }
 
         startButton.snp.makeConstraints { make in
-            make.top.equalTo(descriptionLabel.snp.bottom).offset(50)
+            make.top.equalTo(descriptionLabel.snp.bottom).offset(60)
             make.centerX.equalToSuperview()
             make.leading.trailing.equalToSuperview().inset(20)
             make.height.equalTo(55)

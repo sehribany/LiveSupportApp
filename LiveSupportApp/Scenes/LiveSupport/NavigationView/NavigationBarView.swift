@@ -10,6 +10,7 @@ import SnapKit
 
 final class NavigationBarView: UIView {
 
+    // MARK: - Properties
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Canlı Destek"
@@ -35,6 +36,7 @@ final class NavigationBarView: UIView {
         return stackView
     }()
     
+    // MARK: - Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -45,10 +47,12 @@ final class NavigationBarView: UIView {
         setupView()
     }
     
+    // MARK: - Setup Methods
     private func setupView() {
         backgroundColor = .clear
-        addSubview(stackView)
         
+        addSubview(stackView)
+
         stackView.snp.makeConstraints { make in
             make.center.equalToSuperview()
             make.height.equalTo(25)
