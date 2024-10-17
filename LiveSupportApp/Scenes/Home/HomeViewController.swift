@@ -12,16 +12,25 @@ final class HomeViewController: UIViewController, NavigationView {
     
     // MARK: - Properties
     var presenter: ViewToPresenterHomeProtocol!
-
-    // MARK: - Lifecycle Methods
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view = HomeView(self)
-        view.backgroundColor = .white
+        setupHomeView()
     }
-     
+
+    private func setupHomeView() {
+        let homeView = HomeView(controller: self, delegate: self)
+        view = homeView
+    }
 }
 
-extension HomeViewController: PresenterToViewHomeProtocol{
-    // TODO: Implement View Output Methods
+// MARK: - HomeViewDelegate
+extension HomeViewController: HomeViewDelegate {
+    func didTapStartButton() {
+        presenter.startLiveSupport()
+    }
 }
+
+// MARK: - PresenterToViewHomeProtocol
+extension HomeViewController: PresenterToViewHomeProtocol {}

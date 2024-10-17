@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-final class  HomeRouter: PresenterToRouterHomeProtocol {
+final class HomeRouter: PresenterToRouterHomeProtocol {
+    
     // MARK: Static methods
-
     static func createModule() -> HomeViewController {
         let viewController = HomeViewController()
         let interactor = HomeInteractor()
@@ -26,9 +26,15 @@ final class  HomeRouter: PresenterToRouterHomeProtocol {
         return viewController
     }
 
-    private let navigation: NavigationView
+    private let navigation: UIViewController
 
-    init(navigation: NavigationView) {
+    init(navigation: UIViewController) {
         self.navigation = navigation
+    }
+    
+    /// Navigates to the Live Support screen.
+    func navigateToLiveSupport() {
+        let liveSupportVC = LiveSupportViewController()
+        navigation.navigationController?.pushViewController(liveSupportVC, animated: true)
     }
 }

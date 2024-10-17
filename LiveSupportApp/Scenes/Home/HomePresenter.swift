@@ -8,14 +8,13 @@
 
 import Foundation
 
-final class HomePresenter: ViewToPresenterHomeProtocol {
+final class HomePresenter{
 
     // MARK: Properties
     private let view: PresenterToViewHomeProtocol
     private let interactor: PresenterToInteractorHomeProtocol
     private let router: PresenterToRouterHomeProtocol
-
-
+    
     init(interactor: PresenterToInteractorHomeProtocol, router: PresenterToRouterHomeProtocol, view: PresenterToViewHomeProtocol) {
         self.interactor = interactor
         self.router = router
@@ -23,6 +22,12 @@ final class HomePresenter: ViewToPresenterHomeProtocol {
     }
 }
 
-extension HomePresenter: InteractorToPresenterHomeProtocol {
-    
+// MARK: - ViewToPresenterHomeProtocol Implementation
+extension HomePresenter: ViewToPresenterHomeProtocol{
+    func startLiveSupport() {
+        router.navigateToLiveSupport()
+    }
 }
+
+// MARK: - InteractorToPresenterHomeProtocol Implementation
+extension HomePresenter: InteractorToPresenterHomeProtocol {}
