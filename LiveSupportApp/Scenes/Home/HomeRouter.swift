@@ -34,7 +34,6 @@ final class HomeRouter: PresenterToRouterHomeProtocol {
     
     /// Navigates to the Live Support screen.
     func navigateToLiveSupport() {
-        let liveSupportVC = LiveSupportViewController()
-        navigation.navigationController?.pushViewController(liveSupportVC, animated: true)
-    }
+        let liveSupportVC = LiveSupportRouter.createModule()
+        navigation.navigationController?.pushViewController(liveSupportVC, animated: true)    }
 }

@@ -21,8 +21,21 @@ final class LiveSupportPresenter: ViewToPresenterLiveSupportProtocol {
         self.router = router
         self.view = view
     }
+    
+    func loadData() {
+        interactor.fetchLiveSupportData()  // Veriyi al
+    }
 }
 
 extension LiveSupportPresenter: InteractorToPresenterLiveSupportProtocol {
-    
+    func didFetchLiveSupportData(_ responses: [LiveSupportResponse]) {
+        // Verileri başarıyla aldık, görünümü güncelle
+        print("Fetched Live Support Data: \(responses)")
+        // Burada view'yi güncellemek için view protokolü üzerinden çağrı yapabilirsiniz
+    }
+
+    func didFailToFetchLiveSupportData(with error: Error) {
+        print("Failed to fetch live support data: \(error.localizedDescription)")
+        // Hata durumunu view'ye iletebilirsiniz
+    }
 }

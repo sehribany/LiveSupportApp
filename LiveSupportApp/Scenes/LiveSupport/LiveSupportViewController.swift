@@ -21,7 +21,8 @@ final class LiveSupportViewController: UIViewController, NavigationView {
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
+        setupView()        
+        presenter.loadData()
     }
     
     // MARK: - Setup Methods
@@ -32,8 +33,8 @@ final class LiveSupportViewController: UIViewController, NavigationView {
     
     private func setupSupportView() {
         let supportView = LiveSupportView(self)
-        view = supportView
-        view.backgroundColor = .appWhite
+        self.view = supportView
+        self.view.backgroundColor = .appWhite
     }
     
     // MARK: - View Lifecycle

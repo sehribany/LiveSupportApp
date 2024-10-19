@@ -17,6 +17,7 @@ protocol PresenterToViewLiveSupportProtocol {
 
 // MARK: View Input (View -> Presenter)
 protocol ViewToPresenterLiveSupportProtocol {
+    func loadData() 
 }
 
 
@@ -24,12 +25,14 @@ protocol ViewToPresenterLiveSupportProtocol {
 protocol PresenterToInteractorLiveSupportProtocol {
     
     var presenter: InteractorToPresenterLiveSupportProtocol? { get set }
+    func fetchLiveSupportData()
 }
 
 
 // MARK: Interactor Output (Interactor -> Presenter)
 protocol InteractorToPresenterLiveSupportProtocol {
-    
+    func didFetchLiveSupportData(_ responses: [LiveSupportResponse])
+    func didFailToFetchLiveSupportData(with error: Error)
 }
 
 

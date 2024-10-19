@@ -1,0 +1,186 @@
+[
+    {
+        "step": "step_1",
+        "type": "button",
+        "content": {
+            "text": "Merhaba, sana yardımcı olmamı istediğin konuyu seçebilir misin?",
+            "buttons": [
+                {
+                    "label": "İade işlemi",
+                    "action": "step_2"
+                },
+                {
+                    "label": "Sipariş durumu",
+                    "action": "step_3"
+                },
+                {
+                    "label": "Ürün rehberi",
+                    "action": "step_4"
+                },
+                {
+                    "label": "Fatura",
+                    "action": "step_5"
+                },
+                {
+                    "label": "Hesabım",
+                    "action": "step_6"
+                },
+                {
+                    "label": "Sohbeti bitir",
+                    "action": "end_conversation"
+                }
+            ]
+        },
+        "action": "await_user_choice"
+    },
+    {
+        "step": "step_2",
+        "type": "button",
+        "content": {
+            "text": "İade işlemleri için ürününüzü kargoya verdiniz mi?",
+            "buttons": [
+                {
+                    "label": "Evet, kargoya verdim",
+                    "action": "step_7"
+                },
+                {
+                    "label": "Hayır, henüz vermedim",
+                    "action": "step_8"
+                },
+                {
+                    "label": "Sohbeti bitir",
+                    "action": "end_conversation"
+                }
+            ]
+        },
+        "action": "await_user_choice"
+    },
+    {
+        "step": "step_3",
+        "type": "text",
+        "content": "Siparişiniz şu anda kargoda. Takip numaranız: TR123456789",
+        "action": "end_conversation"
+    },
+    {
+        "step": "step_4",
+        "type": "image",
+        "content": "https://example.com/urun-rehberi.png",
+        "action": "show_guide"
+    },
+    {
+        "step": "step_5",
+        "type": "text",
+        "content": "Faturalarınıza ulaşmak için profil sekmesinde bulunan Geçmiş Siparişlerim bölümünden ilgili siparişi seçerek ulaşabilirsiniz.",
+        "action": "end_conversation"
+    },
+    {
+        "step": "step_6",
+        "type": "button",
+        "content": {
+            "text": "Yapmak istediğiniz işlemi seçer misin?",
+            "buttons": [
+                {
+                    "label": "Hesabım",
+                    "action": "step_9"
+                },
+                {
+                    "label": "Elit Üyelik",
+                    "action": "step_10"
+                },
+                {
+                    "label": "Sohbeti bitir",
+                    "action": "end_conversation"
+                }
+            ]
+        },
+        "action": "await_user_choice"
+    },
+    {
+        "step": "step_7",
+        "type": "text",
+        "content": "Teşekkür ederiz! İade işleminiz kargoya ulaştığında işleme alınacaktır.",
+        "action": "end_conversation"
+    },
+    {
+        "step": "step_8",
+        "type": "text",
+        "content": "İade işlemi için ürünü kargoya verdikten sonra işlemler başlatılacaktır. Yardıma ihtiyacınız olursa bizimle iletişime geçebilirsiniz.",
+        "action": "end_conversation"
+    },
+    {
+        "step": "step_9",
+        "type": "button",
+        "content": {
+            "text": "Yapmak istediğiniz işlemi seçer misin?",
+            "buttons": [
+                {
+                    "label": "Hesap Şifremi Nasıl Güncellerim?",
+                    "action": "step_11"
+                },
+                {
+                    "label": "Hesabımı kapatmak istiyorum",
+                    "action": "step_12"
+                },
+                {
+                    "label": "Sohbeti bitir",
+                    "action": "end_conversation"
+                }
+            ]
+        },
+        "action": "await_user_choice"
+    },
+    {
+        "step": "step_10",
+        "type": "button",
+        "content": {
+            "text": "Yapmak istediğiniz işlemi seçer misin?",
+            "buttons": [
+                {
+                    "label": "Ne zaman elite olurum?",
+                    "action": "step_13"
+                },
+                {
+                    "label": "Sohbeti bitir",
+                    "action": "end_conversation"
+                }
+            ]
+        },
+        "action": "await_user_choice"
+    },
+    {
+        "step": "step_11",
+        "type": "text",
+        "content": "Profil sekmesinde bulanan Kullanı Bilgileri Sayfasına giderek şifreni kolayca ve hızlıca güncelleyebilirsin.",
+        "action": "end_conversation"
+    },
+    {
+        "step": "step_12",
+        "type": "text",
+        "content": "Bu işlemi web sitemizdeki Kuulanıcı Bilgilerim menüsü altında gerçekleştirebilirsiniz.",
+        "action": "end_conversation"
+    },
+    {
+        "step": "step_13",
+        "type": "text",
+        "content": "Elit olmak veya Elite üyeliğinin devam etmesi için son 3 ayda yaptığın alışverişlerden toplamda 2500 puan toplamalısın.",
+        "action": "end_conversation"
+    },
+    {
+        "step": "step_14",
+        "type": "button",
+        "content": {
+            "text": "Başka nasıl yardımcı olabilirim?",
+            "buttons": [
+                {
+                    "label": "Yeni bir işlem başlat",
+                    "action": "step_1"
+                },
+                {
+                    "label": "Sohbeti bitir",
+                    "action": "end_conversation"
+                }
+            ]
+        },
+        "action": "await_user_choice"
+    }
+]
