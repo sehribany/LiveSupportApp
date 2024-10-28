@@ -6,7 +6,10 @@
 //
 import Foundation
 
+//MARK: - Class for loading live support data from a JSON file.
 class DataLoader {
+    static let shared = DataLoader()
+    
     func loadLiveSupportData() -> [LiveSupportResponse]? {
         guard let url = Bundle.main.url(forResource: "live_support_flow", withExtension: "json") else {
             print("JSON file not found")

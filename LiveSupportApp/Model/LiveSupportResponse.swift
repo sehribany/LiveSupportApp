@@ -7,9 +7,27 @@
 
 import Foundation
 
+// Adım yapısını tanımlama
+struct Step: Codable {
+    let step: String
+    let type: String
+    let content: Content
+    let action: String
+    
+    struct Content: Codable {
+        let text: String?
+        let buttons: [Button]?
+        
+        struct Button: Codable {
+            let label: String
+            let action: String
+        }
+    }
+}
+
 // MARK: - LiveSupportResponse
 struct LiveSupportResponse: Codable {
-    let step: String
+    let step: LiveSupportChatStepTypes
     let type: TypeEnum
     let content: ContentUnion
     let action: Action
