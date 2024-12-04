@@ -17,7 +17,7 @@ final class LiveSupportInteractor: PresenterToInteractorLiveSupportProtocol {
     
     func fetchLiveSupportData() {
         if let responses = dataLoader.loadLiveSupportData() {
-            presenter?.didFetchLiveSupportData(responses)  // Presenter'a veri iletimi
+            presenter?.didFetchLiveSupportData(responses)
         } else {
             presenter?.didFailToFetchLiveSupportData(with: NSError(domain: "LiveSupportInteractor", code: 0, userInfo: [NSLocalizedDescriptionKey: "Failed to load live support data"]))
         }

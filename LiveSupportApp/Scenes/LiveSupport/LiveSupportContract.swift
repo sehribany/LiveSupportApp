@@ -6,9 +6,6 @@
 //  
 //
 
-import Foundation
-
-
 // MARK: View Output (Presenter -> View)
 protocol PresenterToViewLiveSupportProtocol {
    
@@ -17,7 +14,7 @@ protocol PresenterToViewLiveSupportProtocol {
 
 // MARK: View Input (View -> Presenter)
 protocol ViewToPresenterLiveSupportProtocol {
-    func loadData() 
+    func loadData()
 }
 
 

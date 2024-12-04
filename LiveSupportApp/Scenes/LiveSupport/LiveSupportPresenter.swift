@@ -23,7 +23,7 @@ final class LiveSupportPresenter: ViewToPresenterLiveSupportProtocol {
     }
     
     func loadData() {
-        interactor.fetchLiveSupportData()  // Veriyi al
+        interactor.fetchLiveSupportData()
     }
 }
 

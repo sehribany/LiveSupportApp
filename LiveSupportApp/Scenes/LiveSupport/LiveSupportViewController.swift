@@ -21,7 +21,7 @@ final class LiveSupportViewController: UIViewController, NavigationView {
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()        
+        setupView()
         presenter.loadData()
     }
     

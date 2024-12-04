@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9832E1702CC8412000316994 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 9832E16F2CC8412000316994 /* Starscream */; };
 		98BD7C082CC1360A00D5227A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 98BD7C072CC1360A00D5227A /* SnapKit */; };
 		98BD7C172CC1459200D5227A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 98BD7C162CC1459200D5227A /* Kingfisher */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,7 @@
 			files = (
 				98BD7C172CC1459200D5227A /* Kingfisher in Frameworks */,
 				98BD7C082CC1360A00D5227A /* SnapKit in Frameworks */,
+				9832E1702CC8412000316994 /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +89,7 @@
 			packageProductDependencies = (
 				98BD7C072CC1360A00D5227A /* SnapKit */,
 				98BD7C162CC1459200D5227A /* Kingfisher */,
+				9832E16F2CC8412000316994 /* Starscream */,
 			);
 			productName = LiveSupportApp;
 			productReference = 98BD7BBB2CC12F9900D5227A /* LiveSupportApp.app */;
@@ -119,6 +122,7 @@
 			packageReferences = (
 				98BD7C062CC1360A00D5227A /* XCRemoteSwiftPackageReference "SnapKit" */,
 				98BD7C152CC1459200D5227A /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				9832E16E2CC8412000316994 /* XCRemoteSwiftPackageReference "Starscream" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 98BD7BBC2CC12F9900D5227A /* Products */;
@@ -348,6 +352,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9832E16E2CC8412000316994 /* XCRemoteSwiftPackageReference "Starscream" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daltoniam/Starscream.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.8;
+			};
+		};
 		98BD7C062CC1360A00D5227A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -367,6 +379,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9832E16F2CC8412000316994 /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9832E16E2CC8412000316994 /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
+		};
 		98BD7C072CC1360A00D5227A /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 98BD7C062CC1360A00D5227A /* XCRemoteSwiftPackageReference "SnapKit" */;
